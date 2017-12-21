@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Rotv.Models;
+using Rotv.Services;
 
 namespace Rotv.Controllers
 {
@@ -12,7 +14,8 @@ namespace Rotv.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var json = new JsonProcessor();
+            return View(json.GetRotvSystemInformation());
         }
 
         public IActionResult About()
