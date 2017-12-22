@@ -50,6 +50,7 @@ namespace Rotv.Models
     public string name { get; set; }
     public int minor_faction_id { get; set; }
     public int? state_id { get; set; }
+    public string government { get; set; }
     public float? influence { get; set; }
     public string influence_display { get; set; }
     public string state { get; set; }

@@ -37,6 +37,7 @@ namespace Rotv.Services
                 {
                     var matchingFaction = Factions.FirstOrDefault(f => f.id == faction.minor_faction_id);
                     faction.name = matchingFaction.name;
+                    faction.government = matchingFaction.government;
                     faction.influence_display = Math.Round(faction.influence.Value).ToString();
                 }                
             }
