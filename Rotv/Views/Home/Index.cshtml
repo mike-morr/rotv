@@ -9,7 +9,7 @@
     @foreach (var faction in system.minor_faction_presences)
     {
         // <div style="display: flex; justify-content: space-between; flex-direction: row; flex-wrap: nowrap;">
-            <span style="margin-left: 30px;">@faction.name - <strong>@faction.state (@faction.government)</strong></span>
+            <span style="margin-left: 30px;">@faction.name - <strong>@faction.state</strong></span>
             <div style="margin-left: 30px; width: 450px" class="progress">
                 <div class="progress-bar" role="progressbar" style="width: @faction.influence_display%;" aria-valuenow="@faction.influence_display" aria-valuemin="0" aria-valuemax="100">@faction.influence_display</div>
             </div>
