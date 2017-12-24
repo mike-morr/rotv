@@ -9,14 +9,24 @@
     <strong>@system.name (Last Updated: @system.updated_at_display)</strong><br>
     <strong>@system.controlling_minor_faction</strong> - <strong>@system.state</strong>
     </p>
+    <table class="table table-condensed">
     @foreach (var faction in system.minor_faction_presences)
     {
         // <div style="display: flex; justify-content: space-between; flex-direction: row; flex-wrap: nowrap;">
-            <span style="margin-left: 30px;">@faction.name - <strong>@faction.state</strong></span>
-            <div style="margin-left: 30px; width: 450px" class="progress">
-                <div class="progress-bar" role="progressbar" style="width: @faction.influence_display%;" aria-valuenow="@faction.influence_display" aria-valuemin="0" aria-valuemax="100">@faction.influence_display</div>
-            </div>
+
+            <tr>
+                <td>@faction.name</td>
+                <td>@faction.state</td>
+                <td>
+                    <div class="progress" style="min-width: 200px;">
+                    <div class="progress-bar" role="progressbar" style="width: @faction.influence_display%;" aria-valuenow="@faction.influence_display" aria-valuemin="0" aria-valuemax="100">@faction.influence_display</div>
+                    </div>
+                </td>
+            </tr>
+
+            
         // </div>
     }
+    </table>
 }
 
